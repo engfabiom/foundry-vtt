@@ -9,8 +9,10 @@ services:
       - "30000:30000"
     user: "1000:1000"
     volumes:
+      - foundry_app:/home/foundry/app
       - foundry_data:/home/foundry/data
-    restart: unless-stopped
+    restart: "no" #unless-stopped
 
 volumes:
+  foundry_app:
   foundry_data:
