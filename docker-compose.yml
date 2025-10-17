@@ -1,0 +1,11 @@
+services:
+  foundry:
+    build:
+      context: .              # pasta onde está o Dockerfile e o FoundryVTT.zip
+      dockerfile: Dockerfile  # nome do arquivo (padrão, opcional)
+    image: foundryvtt:latest  # nome da imagem gerada
+    ports:
+      - "30000:30000"
+    user: "1000:1000"
+    volumes:
+      - ./data:/home/foundry/data
